@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Maria Satcliff](https://up.htmlacademy.ru/htmlcss/25/user/577705).
-* Наставник: `Неизвестно`.
+* Наставник: [Юлия Антонова](https://up.htmlacademy.ru/htmlcss/25/user/39082).
 
 ---
 
