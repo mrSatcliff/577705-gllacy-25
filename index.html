@@ -10,7 +10,7 @@
       <nav class="site-navigation">
         <a class="main-header-logo">
           <img src="img/index-logo.svg" width="154" height="64"><!--не является ссылкой на главной, не пункт меню-->
-        </a>
+        </a><!--Вроде и был смещен вправо...-->
         <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог</a>
@@ -25,22 +25,26 @@
           <li><a href="about.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Поиск<!--Иконка поиска--></li>
-          <div class="search-form">
-            <form action="#" method="get">
-              <input type="text" name="search"></input>
-            </form>
-          </div>
-          <li>Вход</li><!--при наведении форма авторизации-->
-          <!--Честно сказать, не очень понимаю на данном этапе, какими средствами оно должно выпадать Х)-->
-          <div class="login-form">
-            <form action="#" method="post">
-              <input type="text" name="login" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
-            <form/>
-          </div>
-          <li>Корзина<!--Интерактивная корзина--></li>
-          <div class="cart-form"><!--Корзина--></div>
+          <li>Поиск<!--Иконка поиска-->
+            <!--<div class="search">
+              <form action="#" method="get">
+                <input type="text" name="search"></input>
+              </form>
+            </div>
+            Закомменчу пока, тк есть ощущение, что это будет javascript с отображением другой страницы-->
+          </li>
+          <li><a href="#">Вход</a><!--при наведении форма авторизации-->
+            <!--<div class="login">
+              <form action="#" method="post">
+                <input type="text" name="login" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+              <form/>
+            </div>
+            Аналогично-->
+          </li>
+          <li><a href="#">Корзина</a><!--Интерактивная корзина-->
+            <!--<div class="cart"></div>-->
+          </li>
         </ul>
       </nav>
       <section>
@@ -66,18 +70,28 @@
           <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
         </ul>
       </section>
-      <article class="main-blog">
-        <h2 class="main-blog-new">Новое в нашем блоге</h2>
-        <p class="main-blog-summary"><a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a></p>
-        <form class="subscribe-form" action="#" method="post">
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-          <input type="email" name="email" placeholder="Электронная почта">
-          <button type="submit">Отправить</button>
-        </form>
-      </article>
+      <section class="announces">
+        <div class="container">
+          <article class="main-blog-preview">
+            <h2 class="main-blog-new">Новое в нашем блоге</h2>
+            <p class="main-blog-summary"><!--я тут все же укажу в классах главную страницу, боюсь, что если бы надо было дальше верстать блог, классы без отсылок на конкретную страницу их использования путаницу бы вызывали, нет?-->
+              <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+            </p>
+          </article>
+          <div class="subscribe-form">
+            <form action="#" method="post">
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+              <input type="email" name="email" placeholder="Электронная почта">
+              <button>Отправить</button><!--а на лекции говорили наоборот лучше уточнять submit-->
+            </form>
+          </div>
+      </section>
+      <section class="map">
+        !Тут будет карта!<br>
+        <!--Пока неразмеченная карта-->
+      </section><!--так вроде карта где надо? Х)-->
    </main>
-   !Тут будет карта!<br>
-   <!--Пока неразмеченная карта-->
+
 
    <footer class="main-footer">
      <div class="footer-social">

@@ -15,33 +15,38 @@
         <ul class="site-navigation">
           <li class="site-navigation-current">
             <a href="#">Каталог</a>
-            <select name="catalog">
-              <option value="#">Сливочное</option>
-              <option value="#">Щербеты</option>
-              <option value="#">Фруктовый лед</option>
-              <option value="#">Мелорин</option>
-            </select>
-          </li><!--должно появляться подменю при наведении-->
+            <ul name="catalog">
+              <li><a href="#">Сливочное</a></li>
+              <!--не очень понимаю, что за "ссылка на внутреннюю страницу" тут должна быть. по логике подошло бы на catalog.html, но разве нормально делать со страницы ссылку на нее саму же?-->
+              <li><a>Щербеты</a></li>
+              <li><a>Фруктовый лед</a></li>
+              <li><a>Мелорин</a></li>
+            </ul>
+          </li><!--подменю при наведении-->
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Поиск<!--Иконка поиска--></li>
-          <div class="search-form">
-            <form action="#" method="get">
-              <input type="text" name="search"></input>
-            </form>
-          </div>
-          <li>Вход</li><!--при наведении форма авторизации-->
-          <!--Честно сказать, не очень понимаю на данном этапе, какими средствами оно должно выпадать Х)-->
-          <div class="login-form">
-            <form action="#" method="post">
-              <input type="text" name="login" placeholder="Электронная почта">
-              <input type="password" name="password" placeholder="Пароль">
-            <form/>
-          </div>
-          <li>Корзина<!--Интерактивная корзина--></li>
-          <div class="cart-form"><!--Корзина--></div>
+          <li>Поиск<!--Иконка поиска-->
+            <!--<div class="search">
+              <form action="#" method="get">
+                <input type="text" name="search"></input>
+              </form>
+            </div>
+            Закомменчу пока, тк есть ощущение, что это будет javascript с отображением другой страницы-->
+          </li>
+          <li><a href="#">Вход</a><!--при наведении форма авторизации-->
+            <!--<div class="login">
+              <form action="#" method="post">
+                <input type="text" name="login" placeholder="Электронная почта">
+                <input type="password" name="password" placeholder="Пароль">
+              <form/>
+            </div>
+            Аналогично-->
+          </li>
+          <li><a href="#">Корзина</a><!--Интерактивная корзина-->
+            <!--<div class="cart"></div>-->
+          </li>
         </ul>
       </nav>
       <section>
@@ -65,7 +70,8 @@
 
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой
+              <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a href="catalog-item.html">
                 <img src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               </a>
             </h3>
@@ -75,7 +81,8 @@
 
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада
+              <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
+              <a href="catalog-item.html">
                 <img src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               </a>
             </h3>
@@ -85,7 +92,8 @@
 
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада
+              <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a href="catalog-item.html">
                 <img src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               </a>
             </h3>
@@ -95,7 +103,8 @@
 
           <li class="catalog-item">
             <h3>
-              <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой
+              <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
+              <a href="catalog-item.html">
                 <img src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               </a>
             </h3>
@@ -105,8 +114,9 @@
 
        <li class="catalog-item">
          <h3>
-           <a href="catalog-item.html">Сливочное с брусничным джемом
-             <img src="img/product-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
+           <a href="catalog-item.html">Сливочное с брусничным джемом</a>
+            <a href="catalog-item.html">
+              <img src="img/product-5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
            </a>
          </h3>
          <b>325 ₽/кг</b>
@@ -115,7 +125,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочно-черничное с цельными ягодами черники
+            <a href="catalog-item.html">Сливочно-черничное с цельными ягодами черники</a>
+            <a href="catalog-item.html">
               <img src="img/product-6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
             </a>
           </h3>
@@ -125,7 +136,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочно-лимонное с карамельной присыпкой
+            <a href="catalog-item.html">Сливочно-лимонное с карамельной присыпкой</a>
+            <a href="catalog-item.html">
               <img src="img/product-7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
             </a>
           </h3>
@@ -135,7 +147,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочное с шоколадной стружкой
+            <a href="catalog-item.html">Сливочное с шоколадной стружкой</a>
+            <a href="catalog-item.html">
               <img src="img/product-8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
             </a>
           </h3>
@@ -145,7 +158,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочно-ванильное с кусочками шоколада
+            <a href="catalog-item.html">Сливочно-ванильное с кусочками шоколада</a>
+            <a href="catalog-item.html">
               <img src="img/product-9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             </a>
           </h3>
@@ -155,7 +169,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочноe с ментоловым сиропом
+            <a href="catalog-item.html">Сливочноe с ментоловым сиропом</a>
+            <a href="catalog-item.html">
               <img src="img/product-10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
             </a>
           </h3>
@@ -165,7 +180,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочное с кусочками черного шоколада
+            <a href="catalog-item.html">Сливочное с кусочками черного шоколада</a>
+            <a href="catalog-item.html">
               <img src="img/product-11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
             </a>
           </h3>
@@ -175,7 +191,8 @@
 
        <li class="catalog-item">
          <h3>
-            <a href="catalog-item.html">Сливочное с мятным сиропом
+            <a href="catalog-item.html">Сливочное с мятным сиропом</a>
+            <a href="catalog-item.html">
               <img src="img/product-12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
             </a>
           </h3>
@@ -183,7 +200,7 @@
           <a class="button" href="#">Быстрый просмотр</a>
        </li>
      </ul>
-     <section/>
+     </section>
      <!--Тут будут номера страниц ктаалога-->
     </main>
     <footer class="main-footer">
