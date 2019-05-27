@@ -11,12 +11,12 @@
       <nav class="site-navigation">
         <a class="main-header-logo">
           <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глейси"><!--не является ссылкой на главной, не пункт меню-->
-        </a><!--Вроде и был смещен вправо...-->
+        </a>
         <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог</a>
             <ul class="catalog">
-              <li><a href="catalog.html">Сливочное</a></li><!--тут по тз все понятно, ведет в каталог-->
+              <li><a href="catalog.html">Сливочное</a></li>
               <li><a>Щербеты</a></li>
               <li><a>Фруктовый лед</a></li>
               <li><a>Мелорин</a></li>
@@ -26,23 +26,11 @@
           <li><a href="about.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a href="#"><img src="img/loupe.svg"></a><!--Иконка поиска-->
-            <!--<div class="search">
-              <form action="#" method="get">
-                <input type="text" name="search"></input>
-              </form>
-            </div>-->
+          <li><a class="search-link" href="search.html"><img src="img/loupe.svg" alt="Поиск"></a>
+          </li> <!--По стандартам доступности модальные окна должны быть продублированы страницами, или мне кажется?-->
+          <li><a class="login-link" href="login.html"><img src="img/entrance.svg" alt="Иконка входа">Вход</a><!--при наведении форма авторизации-->
           </li>
-          <li><a href="#"><img src="img/entrance.svg">Вход</a><!--при наведении форма авторизации-->
-            <!--<div class="login">
-              <form action="#" method="post">
-                <input type="text" name="login" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-              </form>
-            </div>-->
-          </li>
-          <li><a href="#"><img src="img/cart.svg"></a><!--Я имею ввиду значок меняющийся с кол-вом товаров в ней Х)-->
-            <!--<div class="cart"></div>-->
+          <li><a class="card-link" href="cart.html"><img src="img/cart.svg" alt="Корзина"></a><!--А корзина тоже модальное окно? Вроде его нет в фотошопном файле-->
           </li>
         </ul>
       </nav>
@@ -52,7 +40,7 @@
       </section>
     </header>
 
-    <main> <!--Тогда main будет без класса, не страшно ведь? Я все равно пока не понимаю, будет ли у него класс, и зачем-->
+    <main>
       <h1 class="visually-hidden">Магазин мороженного Глейси</h1>
         <!--Пока неразмеченная карусель-->
       !Тут будет малинка и шоколадка!<br>
@@ -73,30 +61,66 @@
         <div class="container">
           <article class="main-blog-preview">
             <h2 class="main-blog-new">Новое в нашем блоге</h2>
-            <p class="main-blog-summary"><!--я тут все же укажу в классах главную страницу, боюсь, что если бы надо было дальше верстать блог, классы без отсылок на конкретную страницу их использования путаницу бы вызывали, нет?-->
+            <p class="main-blog-summary">
               <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
             </p>
           </article>
           <div class="subscribe-form">
             <form action="#" method="post">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-              <input type="email" name="email" placeholder="Электронная почта">
-              <button>Отправить</button><!--я верю, не буду делать Х)-->
+              <label for="subcription" class="visually-hidden">Подписаться на рассылку</label>
+              <input type="email" name="email" placeholder="Электронная почта" id="subcription">
+              <button>Отправить</button>
             </form>
           </div>
         </div>
       </section>
       <section class="map">
-        !Тут будет карта!<br>
-        <!--Пока неразмеченная карта-->
-      </section><!--так вроде карта где надо? Х)-->
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="img/map.jpg" width="100%" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <!--потом надо добавить булавку, а еще конечно установить бы ширину 100%, но не более разрешения картинки, не знаю, правда, как-->
+      </section>
+      <!--Модальные окна-->
+      <section class="modal modal-search">
+        <h2 class="visually-hidden">Поиск</h2>
+        <form action="#" method="get">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input type="text" name="search" placeholder="Что ищем?" id="search"></input>
+        </form>
+      </section>
+      <section class="modal modal-login">
+        <h2 class="visually-hidden">Вход в личный кабинет</h2>
+        <form action="#" method="post">
+          <label for="email" class="visually-hidden">Email</label>
+          <input type="text" name="login" placeholder="Электронная почта" id="email">
+          <label for="password">Пароль</label>
+          <input type="password" name="password" placeholder="Пароль" id="password">
+          <button>Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </form>
+      </section>
+      <section class="modal modal-feedback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form action="#" method="get">
+          <label for="your-name" class="visually-hidden"></label>
+          <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?">
+          <label for="your-mail" class="visually-hidden"></label>
+          <input type="text" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?">
+          <label for="your-message" class="visually-hidden"></label>
+          <input type="text" name="your-message" id="your-message" placeholder="Напишите что-нибудь...">
+          <button>Отправить</button>
+        </form>
+      </section>
+
+
    </main>
 
 
    <footer class="main-footer">
      <div class="footer-social">
        <h2 class="visually-hidden">Мы в социальных сетях</h2>
-       <ul><!--Должны быть иконки соцсетей-->
+       <ul>
          <li><a class="social-button" href="#">Твиттер</a></li>
          <li><a class="social-button" href="#">Инстаграм</a></li>
          <li><a class="social-button" href="#">Фэйсбук</a></li>

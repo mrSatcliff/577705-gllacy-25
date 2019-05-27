@@ -28,25 +28,11 @@
           <li><a href="about.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li>Поиск<!--Иконка поиска-->
-            <!--<div class="search">
-              <form action="#" method="get">
-                <input type="text" name="search"></input>
-              </form>
-            </div>
-            Закомменчу пока, тк есть ощущение, что это будет javascript с отображением другой страницы-->
+          <li><a class="search-link" href="search.html"><img src="img/loupe.svg" alt="Поиск"></a>
           </li>
-          <li><a href="#">Вход</a><!--при наведении форма авторизации-->
-            <!--<div class="login">
-              <form action="#" method="post">
-                <input type="text" name="login" placeholder="Электронная почта">
-                <input type="password" name="password" placeholder="Пароль">
-              <form/>
-            </div>
-            Аналогично-->
+          <li><a class="login-link" href="login.html"><img src="img/entrance.svg" alt="Иконка входа">Вход</a><!--при наведении форма авторизации-->
           </li>
-          <li><a href="#">Корзина</a><!--Интерактивная корзина-->
-            <!--<div class="cart"></div>-->
+          <li><a class="card-link" href="cart.html"><img src="img/cart.svg" alt="Корзина"></a>
           </li>
         </ul>
       </nav>
@@ -63,8 +49,38 @@
         <li class="breadcrumbs-current">Сливочное</li>
       </ul>
       <h1 class="page-title">Сливочное мороженное</h1>
-      !Тут будет секция с фильтрами!
       <!--Фильтры выбора мороженного-->
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form class="filter" method="get" action="#">
+          <fieldset>
+            <legend>Сортировка:</legend>
+            <ul class="sort-type">
+              <li class="sort-type">по популярности</li>
+              <li class="sort-type">сначала недорогие</li>
+              <li class="sort-type">сначала дорогие</li>
+              <li class="sort-type">по жирности</li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+            <!--Ползунок, черт знает, как делать-->
+          </fieldset>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <form>
+              <input type="radio">0%
+              <input type="radio">до 10%
+              <input type="radio">до 30%
+              <input type="radio">выше 30%
+            </form>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <>
+          </fieldset>
+        </form>
+      </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список мороженного</h2>
         <ul class="catalog-list">
@@ -203,6 +219,33 @@
      </ul>
      </section>
      <!--Тут будут номера страниц ктаалога-->
+     <!--Модальные окна-->
+     <section class="modal modal-search">
+       <h2 class="visually-hidden">Поиск</h2>
+       <form action="#" method="get">
+         <label for="search" class="visually-hidden">Поиск</label>
+         <input type="text" name="search" placeholder="Что ищем?" id="search"></input>
+       </form>
+     </section>
+     <section class="modal modal-login">
+       <h2 class="visually-hidden">Вход в личный кабинет</h2>
+       <form action="#" method="post">
+         <label for="email" class="visually-hidden">Email</label>
+         <input type="text" name="login" placeholder="Электронная почта" id="email">
+         <label for="password">Пароль</label>
+         <input type="password" name="password" placeholder="Пароль" id="password">
+         <button>Войти</button>
+         <a href="#">Забыли пароль?</a>
+         <a href="#">Новая регистрация</a>
+       </form>
+     </section>
+     <section class="modal modal-card">
+       <h2 class="visually-hidden">Корзина</h2>
+       <form action="#" method="get">
+         <!---->
+         <button>Оформить заказ</button>
+       </form>
+     </section>
     </main>
     <footer class="main-footer">
       <div class="footer-social">
