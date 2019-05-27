@@ -15,12 +15,13 @@
         <ul class="site-navigation">
           <li>
             <a href="catalog.html">Каталог</a>
-            <ul class="catalog">
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a>Щербеты</a></li>
-              <li><a>Фруктовый лед</a></li>
-              <li><a>Мелорин</a></li>
-            </ul>
+            <select class="catalog">
+              <option>Новинки</option>
+              <option>Сливочное</option>
+              <option>Щербеты</option>
+              <option>Фруктовый лед</option>
+              <option>Мелорин</option>
+            </select>
           </li><!--должно появляться подменю при наведении-->
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О компании</a></li>
@@ -77,7 +78,7 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map.jpg" width="100%" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <img src="img/map.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <!--потом надо добавить булавку, а еще конечно установить бы ширину 100%, но не более разрешения картинки, не знаю, правда, как-->
       </section>
       <!--Модальные окна-->
@@ -85,7 +86,7 @@
         <h2 class="visually-hidden">Поиск</h2>
         <form action="#" method="get">
           <label for="search" class="visually-hidden">Поиск</label>
-          <input type="text" name="search" placeholder="Что ищем?" id="search"></input>
+          <input type="text" name="search" placeholder="Что ищем?" id="search">
         </form>
       </section>
       <section class="modal modal-login">
@@ -118,15 +119,31 @@
 
 
    <footer class="main-footer">
-     <div class="footer-social">
+     <section class="footer-social">
        <h2 class="visually-hidden">Мы в социальных сетях</h2>
        <ul>
-         <li><a class="social-button" href="#">Твиттер</a></li>
-         <li><a class="social-button" href="#">Инстаграм</a></li>
-         <li><a class="social-button" href="#">Фэйсбук</a></li>
-         <li><a class="social-button" href="#">Вконтакте</a></li>
+         <li>
+           <a class="social-button" href="#">
+             <img src="img/twitter.svg" alt="Twitter" title="Twitter">
+           </a>
+         </li>
+         <li>
+           <a class="social-button" href="#">
+             <img src="img/instagram.svg" alt="Instagram" title="Instagram">
+           </a>
+         </li>
+         <li>
+           <a class="social-button" href="#">
+             <img src="img/fb.svg" alt="Facebook" title="Facebook">
+           </a>
+         </li>
+         <li>
+           <a class="social-button" href="#">
+             <img src="img/vk.svg" alt="Vkontakte" title="Vkontakte">
+           </a>
+         </li>
        </ul>
-     </div>
+     </section>
      <section class="footer-legal">
        <h2 class="visually-hidden">Юридическая информация</h2>
        <ul>

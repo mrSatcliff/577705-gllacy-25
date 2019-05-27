@@ -16,13 +16,13 @@
         <ul class="site-navigation">
           <li class="site-navigation-current">
             <a href="#">Каталог</a>
-            <ul class="catalog">
-              <li><a href="#">Сливочное</a></li>
-              <!--не очень понимаю, что за "ссылка на внутреннюю страницу" тут должна быть. по логике подошло бы на catalog.html, но разве нормально делать со страницы ссылку на нее саму же?-->
-              <li><a>Щербеты</a></li>
-              <li><a>Фруктовый лед</a></li>
-              <li><a>Мелорин</a></li>
-            </ul>
+            <select class="catalog">
+              <option>Новинки</option>
+              <option>Сливочное</option>
+              <option>Щербеты</option>
+              <option>Фруктовый лед</option>
+              <option>Мелорин</option>
+            </select>
           </li><!--подменю при наведении-->
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О компании</a></li>
@@ -43,6 +43,7 @@
     </header>
 
     <main class="container">
+      <h1 class="visually-hidden">Каталог мороженного</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
@@ -52,15 +53,14 @@
       <!--Фильтры выбора мороженного-->
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter" method="get" action="#">
           <fieldset>
             <legend>Сортировка:</legend>
-            <ul class="sort-type">
-              <li class="sort-type">по популярности</li>
-              <li class="sort-type">сначала недорогие</li>
-              <li class="sort-type">сначала дорогие</li>
-              <li class="sort-type">по жирности</li>
-            </ul>
+            <select>
+              <option value="demand">по популярности</option>
+              <option value="cheap">сначала недорогие</option>
+              <option value="expensive">сначала дорогие</option>
+              <option value="fat">по жирности</option>
+            </select>
           </fieldset>
           <fieldset>
             <legend>Цена: 100 руб. – 500 руб.</legend>
@@ -68,18 +68,39 @@
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
-            <form>
-              <input type="radio">0%
-              <input type="radio">до 10%
-              <input type="radio">до 30%
-              <input type="radio">выше 30%
+            <form class="filter-product-fat" action="#" method="get">
+              <label><input type="radio" value="no-fat" name="product-fat">0%</label>
+              <label><input type="radio" value="10-fat" name="product-fat">до 10%</label>
+              <label><input type="radio" value="30-fat" name="product-fat">до 30%</label>
+              <label><input type="radio" value="more-30-fat" name="product-fat">выше 30%</label>
             </form>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <>
+            <form class="filter-product-filling" action="#" method="get">
+              <label>
+                <input class="filling-checkbox" type="checkbox" name="shoko-filling" value="shoko-filling" checked>
+                шоколадные
+              </label>
+              <label>
+                <input class="filling-checkbox" type="checkbox" name="sugar-filling" value="sugar-filling" checked>
+                сахарные присыпки
+              </label>
+              <label>
+                <input class="filling-checkbox" type="checkbox" name="fruit-filling" value="fruit-filling">
+                фрукты
+              </label>
+              <label>
+                <input class="filling-checkbox" type="checkbox" name="syrup-filling" value="syrup-filling">
+                сиропы
+              </label>
+              <label>
+                <input class="filling-checkbox" type="checkbox" name="jam-filling" value="jam-filling">
+                джемы
+              </label>
+              <button>Применить</button>
+            </form>
           </fieldset>
-        </form>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список мороженного</h2>
@@ -218,13 +239,13 @@
        </li>
      </ul>
      </section>
-     <!--Тут будут номера страниц ктаалога-->
+     <!--Тут будут номера страниц каталога-->
      <!--Модальные окна-->
      <section class="modal modal-search">
        <h2 class="visually-hidden">Поиск</h2>
        <form action="#" method="get">
          <label for="search" class="visually-hidden">Поиск</label>
-         <input type="text" name="search" placeholder="Что ищем?" id="search"></input>
+         <input type="text" name="search" placeholder="Что ищем?" id="search">
        </form>
      </section>
      <section class="modal modal-login">
@@ -241,22 +262,66 @@
      </section>
      <section class="modal modal-card">
        <h2 class="visually-hidden">Корзина</h2>
-       <form action="#" method="get">
-         <!---->
-         <button>Оформить заказ</button>
+         <!--Вообще не понимаю. как делать корзину-->
+       <form>
+          <p>
+            Х
+            <img src="img/orange-citrus.jpg" width="30" alt="Изображение товара">
+            Пломбир с апельсиновым джемом
+            1,5 кг х 200 руб.
+            300 руб.
+          </p>
+          <p>
+            Х
+            <img src="img/cream-strawberry.jpg" width="30" alt="Изображение товара">
+            Клубничный пломбир с присыпкой из белого шоколада
+            1,5 кг х 300 руб.
+            450 руб.
+          </p>
+          <output class="cart-sum">Итого: 750 руб.</output><!--Наверное output?-->
+          <button>Оформить заказ</button>
        </form>
+       <!--А еще есть это безобразие в виде таблицы
+       <td>Х</td>
+       <td><img src="img/orange-citrus.jpg" width="30" alt="Изображение товара"></td>
+       <td>Пломбир с апельсиновым джемом</td>
+       <td>1,5 кг х 200 руб.</td>
+       <td>300 руб.</td>
+     </tr>
+     <tr>
+       <td>Х</td>
+       <td><img src="img/cream-strawberry.jpg" width="30" alt="Изображение товара"></td>
+       <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+       <td>1,5 кг х 300 руб.</td>
+       <td>450 руб.</td>-->
      </section>
     </main>
     <footer class="main-footer">
-      <div class="footer-social">
+      <section class="footer-social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul><!--Должны быть иконки соцсетей-->
-          <li><a class="social-button" href="#">Твиттер</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Фэйсбук</a></li>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
+        <ul>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/twitter.svg" alt="Twitter" title="Twitter">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/instagram.svg" alt="Instagram" title="Instagram">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/fb.svg" alt="Facebook" title="Facebook">
+            </a>
+          </li>
+          <li>
+            <a class="social-button" href="#">
+              <img src="img/vk.svg" alt="Vkontakte" title="Vkontakte">
+            </a>
+          </li>
         </ul>
-      </div>
+      </section>
       <section class="footer-legal">
         <h2 class="visually-hidden">Юридическая информация</h2>
         <ul>
