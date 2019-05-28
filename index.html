@@ -14,24 +14,46 @@
         </a>
         <ul class="site-navigation">
           <li>
-            <a href="catalog.html">Каталог</a>
-            <select class="catalog">
-              <option>Новинки</option>
-              <option>Сливочное</option>
-              <option>Щербеты</option>
-              <option>Фруктовый лед</option>
-              <option>Мелорин</option>
-            </select>
-          </li><!--должно появляться подменю при наведении-->
-          <li><a href="delivery.html">Доставка и оплата</a></li>
-          <li><a href="about.html">О компании</a></li>
+            <a href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
+            <ul class="catalog">
+	              <li><a href="catalog.html">Сливочное</a></li>
+	              <li><a>Щербеты</a></li>
+	              <li><a>Фруктовый лед</a></li>
+	              <li><a>Мелорин</a></li>
+	          </ul>
+	         </li>
+          <!--должно появляться подменю при наведении-->
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a class="search-link" href="search.html"><img src="img/loupe.svg" alt="Поиск"></a>
-          </li> <!--По стандартам доступности модальные окна должны быть продублированы страницами, или мне кажется?-->
-          <li><a class="login-link" href="login.html"><img src="img/entrance.svg" alt="Иконка входа">Вход</a><!--при наведении форма авторизации-->
+          <li>
+            <a class="search-link" href="#"><img src="img/loupe.svg" alt="Поиск"></a>
+            <div class="tooltip search-form">
+              <form action="#" method="get">
+                <label for="search" class="visually-hidden">Поиск</label>
+                <input type="text" name="search" placeholder="Что ищем?" id="search">
+              </form>
+            </div>
           </li>
-          <li><a class="card-link" href="cart.html"><img src="img/cart.svg" alt="Корзина"></a><!--А корзина тоже модальное окно? Вроде его нет в фотошопном файле-->
+
+          <li>
+            <a class="login-link" href="#"><img src="img/entrance.svg" alt="Иконка входа">Вход</a>
+            <div class="tooltip login-form">
+              <form action="#" method="post">
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="text" name="login" placeholder="Электронная почта" id="email">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="Пароль" id="password">
+                <button>Войти</button>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </form>
+            </div>
+          </li>
+          <li><a class="card-link" href="#"><img src="img/cart.svg" alt="Корзина">Пусто</a>
+            <div class="tooltip cart-block">
+            </div>
           </li>
         </ul>
       </nav>
@@ -60,9 +82,9 @@
       </section>
       <section class="announces">
         <div class="container">
-          <article class="main-blog-preview">
-            <h2 class="main-blog-new">Новое в нашем блоге</h2>
-            <p class="main-blog-summary">
+          <article class="blog-preview">
+            <h2 class="blog-new">Новое в нашем блоге</h2>
+            <p class="blog-summary">
               <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
             </p>
           </article>
@@ -78,29 +100,9 @@
       </section>
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map.jpg" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <!--потом надо добавить булавку, а еще конечно установить бы ширину 100%, но не более разрешения картинки, не знаю, правда, как-->
+        <img src="img/map.jpg" width="1250" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </section>
       <!--Модальные окна-->
-      <section class="modal modal-search">
-        <h2 class="visually-hidden">Поиск</h2>
-        <form action="#" method="get">
-          <label for="search" class="visually-hidden">Поиск</label>
-          <input type="text" name="search" placeholder="Что ищем?" id="search">
-        </form>
-      </section>
-      <section class="modal modal-login">
-        <h2 class="visually-hidden">Вход в личный кабинет</h2>
-        <form action="#" method="post">
-          <label for="email" class="visually-hidden">Email</label>
-          <input type="text" name="login" placeholder="Электронная почта" id="email">
-          <label for="password">Пароль</label>
-          <input type="password" name="password" placeholder="Пароль" id="password">
-          <button>Войти</button>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Новая регистрация</a>
-        </form>
-      </section>
       <section class="modal modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form action="#" method="get">
@@ -113,10 +115,7 @@
           <button>Отправить</button>
         </form>
       </section>
-
-
    </main>
-
 
    <footer class="main-footer">
      <section class="footer-social">

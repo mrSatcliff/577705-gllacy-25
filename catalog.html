@@ -14,27 +14,72 @@
           <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глейси">
         </a>
         <ul class="site-navigation">
-          <li class="site-navigation-current">
+          <li class="site-navigation-current"><!--это НЕ select, это через CSS-->
             <a href="#">Каталог</a>
-            <select class="catalog">
-              <option>Новинки</option>
-              <option>Сливочное</option>
-              <option>Щербеты</option>
-              <option>Фруктовый лед</option>
-              <option>Мелорин</option>
-            </select>
+            <ul class="catalog">
+	              <li><a href="#">Сливочное</a></li>
+	              <li><a>Щербеты</a></li>
+	              <li><a>Фруктовый лед</a></li>
+	              <li><a>Мелорин</a></li>
+	            </ul>
           </li><!--подменю при наведении-->
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="about.html">О компании</a></li>
         </ul>
         <ul class="user-navigation">
-          <li><a class="search-link" href="search.html"><img src="img/loupe.svg" alt="Поиск"></a>
+          <li>
+            <a class="search-link" href="#"><img src="img/loupe.svg" alt="Поиск"></a>
+            <div class="tooltip search-form">
+              <form action="#" method="get">
+                <label for="search" class="visually-hidden">Поиск</label>
+                <input type="text" name="search" placeholder="Что ищем?" id="search">
+              </form>
+            </div>
           </li>
-          <li><a class="login-link" href="login.html"><img src="img/entrance.svg" alt="Иконка входа">Вход</a><!--при наведении форма авторизации-->
+
+          <li>
+            <a class="login-link" href="#"><img src="img/entrance.svg" alt="Иконка входа">Вход</a>
+            <div class="tooltip login-form">
+              <form action="#" method="post">
+                <label for="email" class="visually-hidden">Email</label>
+                <input type="text" name="login" placeholder="Электронная почта" id="email">
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="Пароль" id="password">
+                <button>Войти</button>
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </form>
+            </div>
           </li>
-          <li><a class="card-link" href="cart.html"><img src="img/cart.svg" alt="Корзина"></a>
+          <li><a class="cart-link" href="#"><img src="img/cart.svg" alt="Корзина">2 товара</a>
+
+            <ul class="tooltip cart-block">
+
+              <li class="cart-item">
+                <button type="button" class="cart-item-delete">X</button>
+                <a href="#">
+                  <img class="cart-item" src="img/orange-citrus.jpg" width="30" height="30" alt="Изображение товара"> Пломбир с апельсиновым джемом</a>
+                <p class="cart-item">1,5 кг х <span class="cart-count-price">200 руб.</span></p>
+                <p class="cart-item">300 руб.</p>
+              </li>
+
+              <li class="cart-item">
+                <button type="button" class="cart-item-delete">X</button>
+                <a href="#">
+                  <img class="cart-item" src="img/cream-strawberry.jpg" width="30" height="30" alt="Изображение товара">
+                </a>
+                <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                <p class="cart-item">1,5 кг х <span class="cart-count-price">300 руб.</span></p>
+                <p class="cart-item">450 руб.</p>
+              </li>
+            </ul>
+            <p class="cart-sum">
+              750 руб.
+            </p>
+            <button type="button" class="cart-button-order">Оформить заказ</button>
           </li>
         </ul>
+
       </nav>
       <section>
         <div class="worktime">С 10 до 20, ежедневно</div>
@@ -240,61 +285,6 @@
      </ul>
      </section>
      <!--Тут будут номера страниц каталога-->
-     <!--Модальные окна-->
-     <section class="modal modal-search">
-       <h2 class="visually-hidden">Поиск</h2>
-       <form action="#" method="get">
-         <label for="search" class="visually-hidden">Поиск</label>
-         <input type="text" name="search" placeholder="Что ищем?" id="search">
-       </form>
-     </section>
-     <section class="modal modal-login">
-       <h2 class="visually-hidden">Вход в личный кабинет</h2>
-       <form action="#" method="post">
-         <label for="email" class="visually-hidden">Email</label>
-         <input type="text" name="login" placeholder="Электронная почта" id="email">
-         <label for="password">Пароль</label>
-         <input type="password" name="password" placeholder="Пароль" id="password">
-         <button>Войти</button>
-         <a href="#">Забыли пароль?</a>
-         <a href="#">Новая регистрация</a>
-       </form>
-     </section>
-     <section class="modal modal-card">
-       <h2 class="visually-hidden">Корзина</h2>
-         <!--Вообще не понимаю. как делать корзину-->
-       <form>
-          <p>
-            Х
-            <img src="img/orange-citrus.jpg" width="30" alt="Изображение товара">
-            Пломбир с апельсиновым джемом
-            1,5 кг х 200 руб.
-            300 руб.
-          </p>
-          <p>
-            Х
-            <img src="img/cream-strawberry.jpg" width="30" alt="Изображение товара">
-            Клубничный пломбир с присыпкой из белого шоколада
-            1,5 кг х 300 руб.
-            450 руб.
-          </p>
-          <output class="cart-sum">Итого: 750 руб.</output><!--Наверное output?-->
-          <button>Оформить заказ</button>
-       </form>
-       <!--А еще есть это безобразие в виде таблицы
-       <td>Х</td>
-       <td><img src="img/orange-citrus.jpg" width="30" alt="Изображение товара"></td>
-       <td>Пломбир с апельсиновым джемом</td>
-       <td>1,5 кг х 200 руб.</td>
-       <td>300 руб.</td>
-     </tr>
-     <tr>
-       <td>Х</td>
-       <td><img src="img/cream-strawberry.jpg" width="30" alt="Изображение товара"></td>
-       <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-       <td>1,5 кг х 300 руб.</td>
-       <td>450 руб.</td>-->
-     </section>
     </main>
     <footer class="main-footer">
       <section class="footer-social">
