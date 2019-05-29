@@ -77,7 +77,7 @@
             <p class="cart-sum">
               750 руб.
             </p>
-            <a class="cart-button-order">Оформить заказ</a>
+            <a href="#" class="cart-button-order">Оформить заказ</a>
           </li>
         </ul>
 
@@ -110,8 +110,21 @@
             </label>
           </fieldset>
           <fieldset>
-            <legend>Цена: 100 руб. – 500 руб.</legend>
-            <span class="price-range"></span> <!---->
+            <legend>Цена:</legend>
+            <label class="visually-hidden">от
+              <input type="number" placeholder="100" name="price-min" min="0">
+            </label>
+            <span class="currency">руб. –</span>
+            <label class="visually-hidden">до
+              <input type="number" placeholder="500" name="price-max" min="0">
+            </label>
+            <span class="currency">руб.</span>
+            <div class="price-range-slider">
+              <span class="price-slider-line-back"></span>
+              <span class="price-slider-line-between"></span>
+              <button type="button" class="price-slider-button">.</button>
+              <button type="button" class="price-slider-button">.</button>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
@@ -123,27 +136,27 @@
           <fieldset>
             <legend>Наполнители:</legend>
               <label>
-                <input class="filling-checkbox" type="checkbox" name="shoko-filling" value="shoko-filling" checked>
+                <input class="filling-checkbox" type="checkbox" name="filling" value="shoko-filling" checked>
                 шоколадные
               </label>
               <label>
-                <input class="filling-checkbox" type="checkbox" name="sugar-filling" value="sugar-filling" checked>
+                <input class="filling-checkbox" type="checkbox" name="filling" value="sugar-filling" checked>
                 сахарные присыпки
               </label>
               <label>
-                <input class="filling-checkbox" type="checkbox" name="fruit-filling" value="fruit-filling">
+                <input class="filling-checkbox" type="checkbox" name="filling" value="fruit-filling">
                 фрукты
               </label>
               <label>
-                <input class="filling-checkbox" type="checkbox" name="syrup-filling" value="syrup-filling">
+                <input class="filling-checkbox" type="checkbox" name="filling" value="syrup-filling">
                 сиропы
               </label>
               <label>
-                <input class="filling-checkbox" type="checkbox" name="jam-filling" value="jam-filling">
+                <input class="filling-checkbox" type="checkbox" name="filling" value="jam-filling">
                 джемы
               </label>
-              <button type="submit">Применить</button>
           </fieldset>
+          <button type="submit">Применить</button>
       </form>
       <section class="catalog">
         <h2 class="visually-hidden">Список мороженного</h2>
