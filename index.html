@@ -16,10 +16,11 @@
           <li>
             <a href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
             <ul class="catalog">
+                <li class="catalog-new"><a href="#">Новинки</a></li>
 	              <li><a href="catalog.html">Сливочное</a></li>
-	              <li><a>Щербеты</a></li>
-	              <li><a>Фруктовый лед</a></li>
-	              <li><a>Мелорин</a></li>
+	              <li><a href="#">Щербеты</a></li>
+	              <li><a href="#">Фруктовый лед</a></li>
+	              <li><a href="#">Мелорин</a></li>
 	          </ul>
 	         </li>
           <!--должно появляться подменю при наведении-->
@@ -28,32 +29,26 @@
         </ul>
         <ul class="user-navigation">
           <li>
-            <a class="search-link" href="#"><img src="img/loupe.svg" alt="Поиск"></a>
-            <div class="tooltip search-form">
-              <form action="#" method="get">
+            <a class="search-link" href="#">Поиск</a>
+              <form class="tooltip search-form" action="https://echo.htmlacademy.ru" method="get">
                 <label for="search" class="visually-hidden">Поиск</label>
-                <input type="text" name="search" placeholder="Что ищем?" id="search">
+                <input type="search" name="search" placeholder="Что ищем?" id="search">
               </form>
-            </div>
           </li>
 
           <li>
-            <a class="login-link" href="#"><img src="img/entrance.svg" alt="Иконка входа">Вход</a>
-            <div class="tooltip login-form">
-              <form action="#" method="post">
+            <a class="login-link" href="#">Вход</a>
+              <form class="tooltip login-form" action="https://echo.htmlacademy.ru" method="post">
                 <label for="email" class="visually-hidden">Email</label>
-                <input type="text" name="login" placeholder="Электронная почта" id="email">
+                <input type="email" name="login" placeholder="Электронная почта" id="email" required>
                 <label for="password">Пароль</label>
-                <input type="password" name="password" placeholder="Пароль" id="password">
-                <button>Войти</button>
+                <input type="password" name="password" placeholder="Пароль" id="password" required>
+                <button type="submit">Войти</button>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </form>
-            </div>
           </li>
-          <li><a class="card-link" href="#"><img src="img/cart.svg" alt="Корзина">Пусто</a>
-            <div class="tooltip cart-block">
-            </div>
+          <li><a class="card-link" href="#">Пусто</a>
           </li>
         </ul>
       </nav>
@@ -89,11 +84,11 @@
             </p>
           </article>
           <div class="subscribe-form">
-            <form action="#" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
               <label for="subcription" class="visually-hidden">Подписаться на рассылку</label>
-              <input type="email" name="email" placeholder="Электронная почта" id="subcription">
-              <button>Отправить</button>
+              <input type="email" name="email" placeholder="Электронная почта" id="subcription" required>
+              <button type="submit">Отправить</button>
             </form>
           </div>
         </div>
@@ -105,14 +100,14 @@
       <!--Модальные окна-->
       <section class="modal modal-feedback">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="#" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <label for="your-name" class="visually-hidden"></label>
-          <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?">
+          <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?" required>
           <label for="your-mail" class="visually-hidden"></label>
-          <input type="text" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?">
+          <input type="text" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?" required>
           <label for="your-message" class="visually-hidden"></label>
-          <input type="text" name="your-message" id="your-message" placeholder="Напишите что-нибудь...">
-          <button>Отправить</button>
+          <textarea name="your-message" id="your-message" placeholder="Напишите что-нибудь..."></textarea>
+          <button type="submit">Отправить</button>
         </form>
       </section>
    </main>
@@ -122,23 +117,23 @@
        <h2 class="visually-hidden">Мы в социальных сетях</h2>
        <ul>
          <li>
-           <a class="social-button" href="#">
-             <img src="img/twitter.svg" alt="Twitter" title="Twitter">
+           <a class="social-button sb-twitter" href="#">
+             TW
            </a>
          </li>
          <li>
-           <a class="social-button" href="#">
-             <img src="img/instagram.svg" alt="Instagram" title="Instagram">
+           <a class="social-button sb-instagram" href="#">
+             IG
            </a>
          </li>
          <li>
-           <a class="social-button" href="#">
-             <img src="img/fb.svg" alt="Facebook" title="Facebook">
+           <a class="social-button sb-facebook" href="#">
+             FB
            </a>
          </li>
          <li>
-           <a class="social-button" href="#">
-             <img src="img/vk.svg" alt="Vkontakte" title="Vkontakte">
+           <a class="social-button sb-vkontakte" href="#">
+            VK
            </a>
          </li>
        </ul>
@@ -146,7 +141,7 @@
      <section class="footer-legal">
        <h2 class="visually-hidden">Юридическая информация</h2>
        <ul>
-         <li class="footer-cooperation-providers"><a href="#">&hearts; Для поставщиков</a></li>
+         <li class="footer-cooperation-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
          <li><a href="#">О производстве</a></li>
          <li><a href="#">Наши документы</a></li>
          <li><a href="#">Экологические стандарты</a></li>
@@ -154,7 +149,7 @@
     </section>
     <section>
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a>
-      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
+      <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!--копирайт--> 2019</p>
     </section>
    </footer>
   </body>

@@ -17,10 +17,11 @@
           <li class="site-navigation-current"><!--это НЕ select, это через CSS-->
             <a href="#">Каталог</a>
             <ul class="catalog">
+                <li class="catalog-new"><a href="#">Новинки</a></li>
 	              <li><a href="#">Сливочное</a></li>
-	              <li><a>Щербеты</a></li>
-	              <li><a>Фруктовый лед</a></li>
-	              <li><a>Мелорин</a></li>
+	              <li><a href="#">Щербеты</a></li>
+	              <li><a href="#">Фруктовый лед</a></li>
+	              <li><a href="#">Мелорин</a></li>
 	            </ul>
           </li><!--подменю при наведении-->
           <li><a href="delivery.html">Доставка и оплата</a></li>
@@ -28,30 +29,30 @@
         </ul>
         <ul class="user-navigation">
           <li>
-            <a class="search-link" href="#"><img src="img/loupe.svg" alt="Поиск"></a>
+            <a class="search-link" href="#">Поиск</a>
             <div class="tooltip search-form">
-              <form action="#" method="get">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <label for="search" class="visually-hidden">Поиск</label>
-                <input type="text" name="search" placeholder="Что ищем?" id="search">
+                <input type="search" name="search" placeholder="Что ищем?" id="search">
               </form>
             </div>
           </li>
 
           <li>
-            <a class="login-link" href="#"><img src="img/entrance.svg" alt="Иконка входа">Вход</a>
+            <a class="login-link" href="#">Вход</a>
             <div class="tooltip login-form">
-              <form action="#" method="post">
+              <form action="https://echo.htmlacademy.ru" method="post">
                 <label for="email" class="visually-hidden">Email</label>
-                <input type="text" name="login" placeholder="Электронная почта" id="email">
+                <input type="email" name="login" placeholder="Электронная почта" id="email" required>
                 <label for="password">Пароль</label>
-                <input type="password" name="password" placeholder="Пароль" id="password">
-                <button>Войти</button>
+                <input type="password" name="password" placeholder="Пароль" id="password" required>
+                <button type="submit">Войти</button>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </form>
             </div>
           </li>
-          <li><a class="cart-link" href="#"><img src="img/cart.svg" alt="Корзина">2 товара</a>
+          <li><a class="cart-link" href="#">2 товара</a>
 
             <ul class="tooltip cart-block">
 
@@ -76,7 +77,7 @@
             <p class="cart-sum">
               750 руб.
             </p>
-            <button type="button" class="cart-button-order">Оформить заказ</button>
+            <a class="cart-button-order">Оформить заказ</a>
           </li>
         </ul>
 
@@ -96,33 +97,31 @@
       </ul>
       <h1 class="page-title">Сливочное мороженное</h1>
       <!--Фильтры выбора мороженного-->
-      <section class="filters">
+      <form class="filters" action="https://echo.htmlacademy.ru" method="get">
         <h2 class="visually-hidden">Фильтр товаров</h2>
           <fieldset>
-            <legend>Сортировка:</legend>
-            <select>
-              <option value="demand">по популярности</option>
-              <option value="cheap">сначала недорогие</option>
-              <option value="expensive">сначала дорогие</option>
-              <option value="fat">по жирности</option>
-            </select>
+            <label>Сортировка:
+              <select>
+                <option value="demand">по популярности</option>
+                <option value="cheap">сначала недорогие</option>
+                <option value="expensive">сначала дорогие</option>
+                <option value="fat">по жирности</option>
+              </select>
+            </label>
           </fieldset>
           <fieldset>
             <legend>Цена: 100 руб. – 500 руб.</legend>
-            <!--Ползунок, черт знает, как делать-->
+            <span class="price-range"></span> <!---->
           </fieldset>
           <fieldset>
             <legend>Жирность:</legend>
-            <form class="filter-product-fat" action="#" method="get">
-              <label><input type="radio" value="no-fat" name="product-fat">0%</label>
-              <label><input type="radio" value="10-fat" name="product-fat">до 10%</label>
-              <label><input type="radio" value="30-fat" name="product-fat">до 30%</label>
-              <label><input type="radio" value="more-30-fat" name="product-fat">выше 30%</label>
-            </form>
+              <input type="radio" value="no-fat" name="product-fat" id="0-fat"><label for="0-fat">0%</label>
+              <input type="radio" value="10-fat" name="product-fat" id="10-fat" checked><label for="10-fat">до 10%</label>
+              <input type="radio" value="30-fat" name="product-fat" id="30-fat"><label for="30-fat">до 30%</label>
+              <input type="radio" value="more-30-fat" name="product-fat" id="more-30-fat"><label for="more-30-fat">выше 30%</label>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <form class="filter-product-filling" action="#" method="get">
               <label>
                 <input class="filling-checkbox" type="checkbox" name="shoko-filling" value="shoko-filling" checked>
                 шоколадные
@@ -143,10 +142,9 @@
                 <input class="filling-checkbox" type="checkbox" name="jam-filling" value="jam-filling">
                 джемы
               </label>
-              <button>Применить</button>
-            </form>
+              <button type="submit">Применить</button>
           </fieldset>
-      </section>
+      </form>
       <section class="catalog">
         <h2 class="visually-hidden">Список мороженного</h2>
         <ul class="catalog-list">
@@ -291,23 +289,23 @@
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/twitter.svg" alt="Twitter" title="Twitter">
+            <a class="social-button sb-twitter" href="#">
+              TW
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/instagram.svg" alt="Instagram" title="Instagram">
+            <a class="social-button sb-instagram" href="#">
+              IG
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/fb.svg" alt="Facebook" title="Facebook">
+            <a class="social-button sb-facebook" href="#">
+              FB
             </a>
           </li>
           <li>
-            <a class="social-button" href="#">
-              <img src="img/vk.svg" alt="Vkontakte" title="Vkontakte">
+            <a class="social-button sb-vkontakte" href="#">
+             VK
             </a>
           </li>
         </ul>
@@ -315,16 +313,16 @@
       <section class="footer-legal">
         <h2 class="visually-hidden">Юридическая информация</h2>
         <ul>
-        <li class="footer-cooperation-providers" ><a href="#">&hearts; Для поставщиков</a></li>
-        <li><a href="#">О производстве</a></li>
-        <li><a href="#">Наши документы</a></li>
-        <li><a href="#">Экологические стандарты</a></li>
+          <li class="footer-cooperation-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
+          <li><a href="#">О производстве</a></li>
+          <li><a href="#">Наши документы</a></li>
+          <li><a href="#">Экологические стандарты</a></li>
         </ul>
-      </section>
-      <section>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a>
-        <p>Сделано в HTML Academy &copy; 2019</p>
-      </section>
+     </section>
+     <section>
+       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a>
+       <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!--копирайт--> 2019</p>
+     </section>
     </footer>
 
     </body>
