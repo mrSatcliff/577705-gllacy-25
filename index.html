@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Магазин мороженного Глейси</title>
-    <style> body {background-color: #849d8f;} </style> <!--Чисто посмотреть картинки-->
+    <title>Магазин мороженого Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
@@ -14,7 +16,7 @@
         </a>
         <ul class="site-navigation">
           <li>
-            <a href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
+            <a class="catalog-button" href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
             <ul class="catalog">
                 <li class="catalog-new"><a href="#">Новинки</a></li>
 	              <li><a href="catalog.html">Сливочное</a></li>
@@ -24,8 +26,8 @@
 	          </ul>
 	         </li>
           <!--должно появляться подменю при наведении-->
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О компании</a></li>
+          <li><a class="catalog-button" href="#">Доставка и оплата</a></li>
+          <li><a class="catalog-button" href="#">О компании</a></li>
         </ul>
         <ul class="user-navigation">
           <li>
@@ -59,15 +61,15 @@
     </header>
 
     <main>
-      <h1 class="visually-hidden">Магазин мороженного Глейси</h1>
+      <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
         <!--Пока неразмеченная карусель-->
       !Тут будет малинка и шоколадка!<br>
          <!--Пока неразмеченные малинка и шоколадка-->
-     !Тут будут 4 кружка с мороженным!<br>
-         <!--Пока неразмеченные 4 кружка с мороженным-->
+     !Тут будут 4 кружка с мороженым!<br>
+         <!--Пока неразмеченные 4 кружка с мороженым-->
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <p class="features-header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features-list">
           <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
@@ -76,23 +78,22 @@
         </ul>
       </section>
       <section class="announces">
-        <div class="container">
-          <article class="blog-preview">
-            <h2 class="blog-new">Новое в нашем блоге</h2>
-            <p class="blog-summary">
-              <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-            </p>
-          </article>
-          <div class="subscribe-form">
+        <div class="blog-container">
+          <h2 class="blog-new">Новое в нашем блоге</h2>
+              <p class="blog-summary">
+                <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+              </p>
+        </div>
+      <div class="subscribe-form">
             <form action="https://echo.htmlacademy.ru" method="post">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
               <label for="subcription" class="visually-hidden">Подписаться на рассылку</label>
               <input type="email" name="email" placeholder="Электронная почта" id="subcription" required>
               <button type="submit">Отправить</button>
             </form>
-          </div>
-        </div>
+      </div>
       </section>
+
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <img src="img/map.jpg" width="1250" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
@@ -147,9 +148,9 @@
          <li><a href="#">Экологические стандарты</a></li>
        </ul>
     </section>
-    <section>
+    <section  class="copyright-footer">
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a>
-      <p class="copyright">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!--копирайт--> 2019</p>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!--копирайт--> 2019</p>
     </section>
    </footer>
   </body>

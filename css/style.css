@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+
+  background-color: #849d8f;
+}
+
+a {
+    text-decoration: none;
+  }
+
+.visually-hidden {
+  font-size: 0px;
+}
+
+.main-header {}
+
+.site-navigation {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  color: #FFFFFF;
+
+  background-color: #849d8f;
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a,
+.breadcrumbs a,
+.catalog-item a{
+  color: #ffffff;
+}
+
+.user-navigation a:hover,
+.user-navigation a:active,
+.breadcrumbs a:hover,
+.breadcrumbs a:active,
+.catalog-item a:hover,
+.catalog-item a:active {
+  color: #ffbc9e;
+}
+.worktime {
+  color: white;
+  font-size: 14px;
+}
+
+.telephone {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.telephone:hover,
+.telephone:active{
+  color: #ffbc9e;
+}
+
+.catalog li,
+.footer-social li,
+.footer-legal li,
+.breadcrumbs li{
+  list-style: none;
+}
+
+.catalog-button:hover {
+  background-color: #f7f6f3;
+  color: #000000;
+  border-radius: 20px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+
+.catalog-button-current {
+  background-color: #d07058;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+
+.catalog-button-current:hover {
+  background-color: #d07058;
+  color: #FFFFFF;
+  border-radius: 20px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-top: 7px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+
+
+.user-navigation {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+
+  background-color: #849d8f;
+  list-style: none;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+}
+
+.filters {
+  font-size: 16px;
+}
+
+.filter-header{
+  font-size: 14px;
+}
+
+#price-min,
+#price-max {
+  font-size: 14px;
+  background-color: inherit;
+  color: white;
+  border: none;
+}
+
+::-webkit-input-placeholder {color:#FFFFFF;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+/* это нагуглилось, но чтот оно какое-то не такое, да? */
+}
+
+.price-slider-line-back {
+  width: 177px;
+  height: 4px;
+  background-color: #d1dad3;
+}
+
+.features {
+  width: 90%;
+  background-image: url("../img/wafer-background.jpg");
+  background-position: 0 0;
+  background-repeat: round;
+  background-color: #ecdfc3;
+  color: black;
+  border-radius: 15px;
+  margin-left: 27px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.feature-list li:first-of-type {
+  list-style-image: url("");
+} /* Так иконки оформлять на главной? Или там before будет?*/
+
+.features-header {
+  font-size: 24px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.announces {
+  width: 90%;
+}
+
+.blog-container {
+  width: 48%;
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  background-image: url("../img/strawberry-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  margin-left: 27px;
+}
+
+.blog-summary {
+  padding-left: 22px;
+  padding-bottom: 90px;
+}
+
+.blog-new {
+  font-size: 16px;
+  font-weight: normal;
+  padding-top: 20px;
+  padding-left: 22px;
+  padding-bottom: 0px;
+}
+
+.blog-summary {
+  font-size: 24px;
+}
+
+.blog-summary a {
+  text-decoration: underline;
+  color: black;
+}
+
+.subscribe-form {
+  width: 46%;
+  height: auto;
+  background-color: #f8f7f4;
+  color: #5a5a5a;
+  border: 5px solid white;
+  border-radius: 15px 15px;
+  border-image: url("../img/bg-post.svg") 5 round round;
+  margin-left: 27px;
+  padding-left: 22px;
+  padding-top: 12px;
+}/*Ну, да, так картинка вот максимум как похоже*/
+
+.subscribe-form input {
+  width: 360px;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+}
+
+.subscribe-form button {
+   background-color: #f06441;
+   border-radius: 20px;
+   color: white;
+   border: none;
+   box-shadow: 0 1px 3px 0 #c9685d;
+   padding-left: 15px;
+   padding-top: 10px;
+   padding-right: 15px;
+   padding-bottom: 10px;
+} /*Конпки такими должны быть?*/
+
+.catalog-item-price {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.catalog-item a {
+  font-weight: normal;
+}
+
+.catalog-item img{
+  border-radius: 50%;
+}
+
+.catalog-item-button{
+
+}
+
+.main-footer a{
+  color: white;
+}
+
+.main-footer a:hover,
+.main-footer a:active{
+  color: #ffbc9e;
+}
+
+.footer-legal {
+  font-size: 13px;
+}
+
+.copyright-footer {
+  font-size: 12px;
+}
