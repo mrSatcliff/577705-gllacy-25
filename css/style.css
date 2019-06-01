@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  letter-spacing: 0;
   color: #FFFFFF;
 
   background-color: #849d8f;
@@ -19,42 +20,201 @@ a {
   font-size: 0px;
 }
 
-.main-header {}
+.main-header {
+  background-color: #849d8f;
+}
 
 .site-navigation {
   font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 12px;
-  font-weight: 400;
+  line-height: 18px;
+  font-weight: 700;
   color: #FFFFFF;
 
   background-color: #849d8f;
   list-style: none;
 }
 
-.site-navigation a,
-.user-navigation a,
+.user-navigation {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+
+  background-color: #849d8f;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:active,
+.breadcrumbs a:focus {
+  color: #ffbc9e;
+  background-color: #849d8f;
+}
+
+.catalog-item {
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
 .breadcrumbs a,
 .catalog-item a{
   color: #ffffff;
 }
 
-.user-navigation a:hover,
-.user-navigation a:active,
-.breadcrumbs a:hover,
-.breadcrumbs a:active,
-.catalog-item a:hover,
-.catalog-item a:active {
-  color: #ffbc9e;
+.catalog-item:hover,
+.catalog-item:focus {
+  color: #ffffff;
+  background-color: #9bafa3;
+  border-radius: 5px;
+}
+
+.catalog a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+
+.catalog a:hover,
+.catalog a:focus {
+  background-color: #fbded8;
+  color:#323232;
+}
+
+.catalog a:active {
+  background-color: #f6b5a5;
+  color:#323232;
+}
+
+.catalog-new {
+  background-color: #f8f7f4;
+  border-bottom: 1px solid #d1d0ce;
+}
+
+.catalog-new a {
+  background-color: #f8f7f4;
+
+  color: #323232;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.catalog-current a {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.catalog-current a:hover {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.search-link {
+  color: #ffffff;
+
+  background-color: #a0b5a9;
+  border-radius: 15px;
+}
+
+.login-link,
+.empty-cart {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+
+  background-color: #9db1a5;
+  border-radius: 15px;
+}
+
+.search-link:hover,
+.search-link:active,
+.search-link:focus,
+.login-link:hover,
+.login-link:active,
+.login-link:focus {
+  background-color: #f8f7f4;
+  color:#323232;
+}
+
+.search-form,
+.login-form {
+  background-color: #f8f7f4;
+  color: #323232;
+}
+
+.search-form input,
+.login-form input {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  outline: none;
+  font: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.search-form input::placeholder,
+ .login-form input::placeholder{
+   font-size: 14px;
+   line-height: 24px;
+   font-weight: 400;
+}
+
+.login-form a{
+  color: #323232;
+  font-size: 13px;
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+.empty-cart:hover,
+.empty-cart:active,
+.empty-cart:focus {
+  background-color: #9db1a5;
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+.shopping-cart {
+  background-color: #f7f6f3;
+  color: #323232;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  border-radius: 15px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.shopping-cart:hover,
+.shopping-cart:focus,
+.shopping-cart:active {
+  background-color: #f7f6f3;
+  color: #323232;
 }
 .worktime {
-  color: white;
+  background-color: #849d8f;
+  color: #ffffff;;
   font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
 }
 
 .telephone {
+  background-color: #849d8f;
   color: #ffffff;
   font-size: 22px;
+  line-height: 24px;
   font-weight: 700;
 }
 
@@ -70,9 +230,16 @@ a {
   list-style: none;
 }
 
-.catalog-button:hover {
+.menu-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700px;
+  color: #ffffff;
+}
+
+.menu-button:hover {
   background-color: #f7f6f3;
-  color: #000000;
+  color: #323232;
   border-radius: 20px;
   padding-bottom: 7px;
   padding-left: 15px;
@@ -81,18 +248,21 @@ a {
   font-weight: 700;
 }
 
-.catalog-button-current {
+.menu-button-current {
   background-color: #d07058;
-  color: #FFFFFF;
   border-radius: 20px;
   padding-bottom: 7px;
   padding-left: 15px;
   padding-top: 7px;
   padding-right: 15px;
+
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 18px;
   font-weight: 700;
 }
 
-.catalog-button-current:hover {
+.menu-button-current:hover {
   background-color: #d07058;
   color: #FFFFFF;
   border-radius: 20px;
@@ -110,12 +280,20 @@ a {
   font-weight: 400;
   color: #FFFFFF;
 
-  background-color: #849d8f;
   list-style: none;
 }
 
 .breadcrumbs {
   font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.page-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .filters {
@@ -124,24 +302,19 @@ a {
 
 .filter-header{
   font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
 }
 
 #price-min,
 #price-max {
   font-size: 14px;
-  background-color: inherit;
   color: white;
   border: none;
 }
 
-::-webkit-input-placeholder {color:#FFFFFF;}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-/* это нагуглилось, но чтот оно какое-то не такое, да? */
+.filling-checkbox {
+/*  color: #eef2f0;  этим цветом чекбоксы надо задать*/
 }
 
 .price-slider-line-back {
@@ -150,43 +323,54 @@ input::-webkit-inner-spin-button {
   background-color: #d1dad3;
 }
 
+.filter-button {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fcfcfc;
+  background-color: #a6b7ae;
+  border-radius: 15px;
+  border: 2px solid #fcfcfc;
+}
+
 .features {
   width: 90%;
   background-image: url("../img/wafer-background.jpg");
   background-position: 0 0;
   background-repeat: round;
   background-color: #ecdfc3;
-  color: black;
+  color: #323232;
   border-radius: 15px;
   margin-left: 27px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 30px;
+}
+
+.features-header {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #323232;
+  margin-left: 21px;
 }
 
 .features-list {
   list-style: none;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
 }
 
-.feature-list li:first-of-type {
-  list-style-image: url("");
-} /* Так иконки оформлять на главной? Или там before будет?*/
-
-.features-header {
-  font-size: 24px;
-  padding-left: 20px;
-  padding-right: 15px;
-}
 
 .announces {
   width: 90%;
 }
 
 .blog-container {
-  width: 48%;
+  color: #323232;
+
+  width: 50%;
+  min-width: 560px;
   background-color: white;
-  color: black;
   border-radius: 15px;
   background-image: url("../img/strawberry-background.jpg");
   background-position: 0 0;
@@ -194,35 +378,40 @@ input::-webkit-inner-spin-button {
   margin-left: 27px;
 }
 
-.blog-summary {
-  padding-left: 22px;
-  padding-bottom: 90px;
-}
-
 .blog-new {
   font-size: 16px;
-  font-weight: normal;
+  line-height: 22px;
+  font-weight: 400;
   padding-top: 20px;
   padding-left: 22px;
-  padding-bottom: 0px;
 }
 
 .blog-summary {
   font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  padding-left: 22px;
+  padding-bottom: 90px;
 }
 
 .blog-summary a {
   text-decoration: underline;
-  color: black;
+  color: #323232;
 }
 
 .subscribe-form {
-  width: 46%;
+  width: 50%;
+  min-width: 560px;
   height: auto;
-  background-color: #f8f7f4;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
   color: #5a5a5a;
+
+  background-color: #f8f7f4;
   border: 5px solid white;
-  border-radius: 15px 15px;
+  border-radius: 15px;
   border-image: url("../img/bg-post.svg") 5 round round;
   margin-left: 27px;
   padding-left: 22px;
@@ -230,33 +419,156 @@ input::-webkit-inner-spin-button {
 }/*Ну, да, так картинка вот максимум как похоже*/
 
 .subscribe-form input {
-  width: 360px;
-  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  font: inherit;
+
+  width: 370px;
   margin-top: 20px;
   margin-bottom: 35px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  outline: none;
 }
 
+
+.subscribe-form input:hover{
+  border: 2px solid #c7c6c5;
+}
+
+.subscribe-form input:active {
+  border: 2px solid #8fbdec;
+}
+
+
 .subscribe-form button {
+   color: white;
+   font-size: 18px;
+   line-height: 24px;
+   font-weight: 700;
+
    background-color: #f06441;
    border-radius: 20px;
-   color: white;
    border: none;
    box-shadow: 0 1px 3px 0 #c9685d;
    padding-left: 15px;
    padding-top: 10px;
    padding-right: 15px;
    padding-bottom: 10px;
-} /*Конпки такими должны быть?*/
-
-.catalog-item-price {
-  font-size: 50px;
-  font-weight: 700;
+   margin-bottom: 35px;
 }
 
-.catalog-item a {
-  font-weight: normal;
+.modal-feedback {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.modal-feedback p{
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.modal-feedback input {
+  width: 370px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.modal-feedback input::placeholder {
+  font-weight: 400;
+}
+
+.modal-feedback input:hover{
+  border: 2px solid #c7c6c5;
+}
+
+.modal-feedback input:active {
+  border: 2px solid #8fbdec;
+}
+
+.modal-feedback textarea {
+  width: 370px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.modal-feedback textarea::placeholder {
+  font-weight: 400;
+}
+
+.modal-feedback textarea:hover{
+  border: 2px solid #c7c6c5;
+}
+
+.modal-feedback textarea:active {
+  border: 2px solid #8fbdec;
+}
+
+.modal-feedback button {
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+
+  background-color: #f06441;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 1px 3px 0 #c9685d;
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.modal-close{
+
+}
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.catalog-item-kg {
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.catalog-item {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .catalog-item img{
@@ -264,11 +576,13 @@ input::-webkit-inner-spin-button {
 }
 
 .catalog-item-button{
-
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
 }
 
 .main-footer a{
-  color: white;
 }
 
 .main-footer a:hover,
@@ -278,8 +592,17 @@ input::-webkit-inner-spin-button {
 
 .footer-legal {
   font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.footer-providers {
+  font-weight: 700;
 }
 
 .copyright-footer {
   font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }

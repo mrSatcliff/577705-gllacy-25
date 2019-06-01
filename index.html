@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженого Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -16,7 +16,7 @@
         </a>
         <ul class="site-navigation">
           <li>
-            <a class="catalog-button" href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
+            <a class="menu-button" href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
             <ul class="catalog">
                 <li class="catalog-new"><a href="#">Новинки</a></li>
 	              <li><a href="catalog.html">Сливочное</a></li>
@@ -26,8 +26,8 @@
 	          </ul>
 	         </li>
           <!--должно появляться подменю при наведении-->
-          <li><a class="catalog-button" href="#">Доставка и оплата</a></li>
-          <li><a class="catalog-button" href="#">О компании</a></li>
+          <li><a class="menu-button" href="#">Доставка и оплата</a></li>
+          <li><a class="menu-button" href="#">О компании</a></li>
         </ul>
         <ul class="user-navigation">
           <li>
@@ -43,14 +43,14 @@
               <form class="tooltip login-form" action="https://echo.htmlacademy.ru" method="post">
                 <label for="email" class="visually-hidden">Email</label>
                 <input type="email" name="login" placeholder="Электронная почта" id="email" required>
-                <label for="password">Пароль</label>
+                <label for="password" class="visually-hidden">Пароль</label>
                 <input type="password" name="password" placeholder="Пароль" id="password" required>
                 <button type="submit">Войти</button>
                 <a href="#">Забыли пароль?</a>
                 <a href="#">Новая регистрация</a>
               </form>
           </li>
-          <li><a class="card-link" href="#">Пусто</a>
+          <li><a class="empty-cart" href="#">Пусто</a>
           </li>
         </ul>
       </nav>
@@ -98,19 +98,6 @@
         <h2 class="visually-hidden">Как до нас добраться</h2>
         <img src="img/map.jpg" width="1250" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
       </section>
-      <!--Модальные окна-->
-      <section class="modal modal-feedback">
-        <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <label for="your-name" class="visually-hidden"></label>
-          <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?" required>
-          <label for="your-mail" class="visually-hidden"></label>
-          <input type="email" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?" required>
-          <label for="your-message" class="visually-hidden"></label>
-          <textarea name="your-message" id="your-message" placeholder="Напишите что-нибудь..."></textarea>
-          <button type="submit">Отправить</button>
-        </form>
-      </section>
    </main>
 
    <footer class="main-footer">
@@ -142,7 +129,7 @@
      <section class="footer-legal">
        <h2 class="visually-hidden">Юридическая информация</h2>
        <ul>
-         <li class="footer-cooperation-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
+         <li class="footer-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
          <li><a href="#">О производстве</a></li>
          <li><a href="#">Наши документы</a></li>
          <li><a href="#">Экологические стандарты</a></li>
@@ -150,8 +137,25 @@
     </section>
     <section  class="copyright-footer">
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Логотип html academy"></a>
-      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!--копирайт--> 2019</p>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2019</p>
     </section>
    </footer>
+
+   <!--Модальные окна-->
+   <section class="modal modal-feedback">
+     <h2 class="visually-hidden">Форма обратной связи</h2>
+     <form action="https://echo.htmlacademy.ru" method="get">
+       <label for="your-name" class="visually-hidden"></label>
+       <p>Мы обязательно вам ответим!</p>
+       <span class="modal-close">X</span>
+       <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?" required>
+       <label for="your-mail" class="visually-hidden"></label>
+       <input type="email" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?" required>
+       <label for="your-message" class="visually-hidden"></label>
+       <textarea name="your-message" id="your-message" placeholder="Напишите что-нибудь..."></textarea>
+       <button type="submit">Отправить</button>
+     </form>
+   </section>
+
   </body>
  </html>
