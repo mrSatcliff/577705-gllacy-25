@@ -10,6 +10,10 @@ body {
   color: #FFFFFF;
 
   background-color: #849d8f;
+  /* Временно для сетки */
+  background-image: url("../img/gllacy-index-full.jpg");
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -17,10 +21,10 @@ a {
   }
 
 .visually-hidden {
-  font-size: 0px;
+  display: none;
 }
 
-.main-header {
+.main-header-logo {
   background-color: #849d8f;
 }
 
@@ -30,7 +34,7 @@ a {
   font-weight: 700;
   color: #FFFFFF;
 
-  background-color: #849d8f;
+background-color: #849d8f;
   list-style: none;
 }
 
@@ -40,7 +44,7 @@ a {
   font-weight: 500;
   color: #FFFFFF;
 
-  background-color: #849d8f;
+background-color: #849d8f;
 }
 
 .breadcrumbs a:hover,
@@ -189,10 +193,6 @@ a {
   line-height: 16px;
   font-weight: 500;
   border-radius: 15px;
-  padding-top:5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
 
 }
 
@@ -283,20 +283,12 @@ a {
   background-color: #f7f6f3;
   color: #323232;
   border-radius: 20px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  padding-top: 7px;
-  padding-right: 15px;
   font-weight: 700;
 }
 
 .menu-button-current {
   background-color: #d07058;
   border-radius: 20px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  padding-top: 7px;
-  padding-right: 15px;
 
   color: #FFFFFF;
   font-size: 16px;
@@ -308,10 +300,6 @@ a {
   background-color: #d07058;
   color: #FFFFFF;
   border-radius: 20px;
-  padding-bottom: 7px;
-  padding-left: 15px;
-  padding-top: 7px;
-  padding-right: 15px;
   font-weight: 700;
 }
 
@@ -380,6 +368,7 @@ a {
   background-color: #a6b7ae;
   border-radius: 15px;
   border: 2px solid #fcfcfc;
+  box-sizing: border-box;
 }
 
 .filter-button:hover,
@@ -387,33 +376,37 @@ a {
   background-color: #fbfcfb;
   color: #353535;
   border: none;
+  box-sizing: border-box;
 }
 
 .filter-button:active {
   background-color: #eaeaea;
   box-shadow: inset 0 1px 3px 0 #6a6b6a;
-}
+  box-sizing: border-box;
+} /*все равно скачет(*/
 
 .features {
-  width: 90%;
   background-image: url("../img/wafer-background.jpg");
   background-position: 0 0;
-  background-repeat: round;
+  background-size: auto;
+  background-repeat: repeat;
   background-color: #ecdfc3;
   color: #323232;
   border-radius: 15px;
-  margin-left: 27px;
 }
 
 .features-header {
+  margin: 0;
+  padding: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
   color: #323232;
-  margin-left: 21px;
 }
 
 .features-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-size: 16px;
   line-height: 22px;
@@ -421,38 +414,29 @@ a {
   color: #323232;
 }
 
-
 .announces {
-  width: 90%;
 }
 
 .blog-container {
   color: #323232;
 
-  width: 50%;
-  min-width: 560px;
   background-color: white;
   border-radius: 15px;
   background-image: url("../img/strawberry-background.jpg");
   background-position: 0 0;
   background-repeat: no-repeat;
-  margin-left: 27px;
 }
 
 .blog-new {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
-  padding-top: 20px;
-  padding-left: 22px;
 }
 
 .blog-summary {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
-  padding-left: 22px;
-  padding-bottom: 90px;
 }
 
 .blog-summary a {
@@ -461,9 +445,6 @@ a {
 }
 
 .subscribe-form {
-  width: 50%;
-  min-width: 560px;
-  height: auto;
 
   font-size: 16px;
   line-height: 22px;
@@ -474,10 +455,7 @@ a {
   border: 5px solid white;
   border-radius: 15px;
   border-image: url("../img/bg-post.svg") 5 round round;
-  margin-left: 27px;
-  padding-left: 22px;
-  padding-top: 12px;
-}/*Ну, да, так картинка вот максимум как похоже*/
+}
 
 .subscribe-form input {
   font-size: 16px;
@@ -526,15 +504,12 @@ a {
 .rwbutton:focus {
    text-shadow: #ce5b47 0 1px 3px;
    box-shadow: inset 0 30px 15px 0 #f58669, 0 1px 3px 0 #ac1000;
-
 }
 
 .rwbutton:active {
    text-shadow: #ce5b47 0 1px 3px;
    box-shadow: inset 0 1px 3px 0 #952718, inset 0 -5px 15px 0 #e1613e;
-
 }
-
 
 
 .modal-feedback {
@@ -653,6 +628,10 @@ a {
   color: #fefefe;
 }
 
+.main-footer {
+  /*background-color: #849d8f;*/
+}
+
 .main-footer a {
   color: #ffffff;
 }
@@ -671,7 +650,8 @@ a {
 
 .footer-legal a,
 .copyright-footer p>a,
-.catalog-item h3>a {
+.catalog-item h3>a,
+.site-navigation li {
   border-bottom: 1px solid #9db1a5;
 }
 
@@ -683,4 +663,291 @@ a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+}
+
+/* ----- Сеточные стили ----- */
+.coming-soon {
+  width: 1200px;
+  height: 1150px;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+html,
+body {
+  min-width: 1200px;
+  min-height: 2416px;
+}
+
+
+.main-header {
+  /* Временно для сетки */
+  min-height: 80px;
+  width: 1200px;
+}
+
+.main-nav-wrapper {
+  margin: 0;
+  width: 100%;
+  background-color: #849d8f;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  outline: 2px solid #85cca0; /*зеленый*/
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: flex-start;
+  /* Временно для сетки */
+  min-height: 50px;
+  min-width: 350px;
+  outline: 1px solid #ff65f5; /*розовый*/
+}
+
+.main-header-logo {
+  /* Временно для сетки */
+  width: 154px;
+  height: 64px;
+  margin-top: 9px;
+  margin-left: 27px;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+  margin-top: 30px;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 23px;
+
+  /* Временно для сетки */
+  min-height: 35px;
+  min-width: 245px;
+  outline: 1px solid #FF6600; /*рыжий*/
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.site-nav-container  {
+  width: 748px;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid #FFF; /*белый*/
+}
+
+.contacts {
+  min-height: 50px;
+  margin-right: 27px;
+  text-align: right;
+/* Временно для сетки */
+  outline: 1px solid #FFFF66; /*желтый*/
+}
+
+
+.features {
+  margin: 0;
+  padding: 0;
+  margin-left: 27px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  min-height: 305px;
+  min-width: 1146px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  outline: 1px solid #FFF; /*белый*/
+}
+
+.features-header {
+  margin: 0;
+  padding: 0;
+  margin: 20px 23px 0;
+  padding-right: 10px;
+  outline: 1px solid #FF6600; /*рыжий*/
+  /*временно*/
+  height: 60px;
+}
+
+.features-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  outline: 1px solid #ff65f5; /*розовый*/
+}
+
+.feature-item {
+  margin: 0;
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 2px;
+  outline: 1px solid #FFFF66; /*желтый*/
+}
+
+.features-col-left {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-col-right {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-item-1,
+.feature-item-2 {
+  padding-top: 5px;
+  padding-left: 73px;
+  padding-right: 20px;
+}
+
+
+.feature-item-3,
+.feature-item-4 {
+  padding-top: 5px;
+  padding-left: 68px;
+  padding-right: 30px;
+}
+
+
+.announces {
+  display: flex;
+  flex-direction: row;
+  min-height: 220px;
+  outline: 1px solid #FFFF66; /*желтый*/
+  margin-bottom: 40px;
+}
+
+.blog-container {
+  margin: 0;
+  padding: 0;
+  margin-left: 27px;
+  padding-left: 20px;
+  padding-top: 30px; /*да что не так с этим отступом ТТ он точно 30*/
+  width: 560px;
+  height: 220px;
+  box-sizing: border-box;
+  outline: 1px solid #ff65f5; /*розовый*/
+}
+.blog-new {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.blog-summary {
+  margin: 0;
+  padding: 0;
+  padding-right: 260px;
+}
+
+.subscribe-form {
+  margin-left: 22px;
+  width: 560px;
+  height: 220px;
+  box-sizing: border-box;
+  outline: 1px solid #FF6600; /*рыжий*/
+}
+
+.subscribe-form form {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.main-footer {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  outline: 1px solid #FFFF66; /*желтый*/
+}
+
+.footer-social {
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
+  margin-left: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 185px;
+  height: 40px;
+  outline: 1px solid #FF6600; /*рыжий*/
+}
+
+.footer-social li {
+  width: 38px;
+  height: 38px;
+  outline: 1px solid #FFFF66; /*желтый*/
+}
+
+.footer-legal {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 330px;
+  height: 40px;
+  margin-top: 16px;
+  outline: 1px solid #ff65f5; /*розовый*/
+}
+
+
+.footer-legal-left {
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.footer-legal-right {
+  margin: 0;
+  padding: 0;
+  margin-left: 32px;
+}
+
+.copyright-footer {
+  margin-right: 35px;
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  height: 60px;
+  outline: 2px solid #85cca0; /*зеленый*/
+}
+
+.copyright-footer p{
+  margin: 0;
+  padding: 0;
 }
