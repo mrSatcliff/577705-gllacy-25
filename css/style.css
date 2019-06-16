@@ -879,12 +879,16 @@ a {
   width: 478px;
   height: 443px;
   margin: 0 auto;
-  padding-left: 27px;
+  padding-left: 23px;
   border-radius: 9px;
   /* outline: 2px solid yellow; */
+
+  position: relative;
 }
 
 .modal-feedback p{
+  margin: 0;
+  margin-top: 25px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
@@ -893,10 +897,13 @@ a {
 .modal-feedback form {
   display: flex;
   flex-direction: column;
+  width: 478px;
+  height: 443px;
+  /* outline: 1px solid red; */
 }
 
 .modal-feedback input {
-  width: 370px;
+  width: 265px;
   margin-top: 20px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
@@ -923,6 +930,7 @@ a {
 
 .modal-feedback textarea {
   width: 370px;
+  height: 153px;
   margin-top: 20px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
@@ -954,12 +962,16 @@ a {
 }
 
 .modal-feedback span {
-  align-self: flex-end;
-} /*Почему этот крест вниз уехал? Даже order не помогает*/
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
 
 .modal-feedback button {
+  margin-right: 23px;
   margin-top: 25px;
   align-self: flex-end;
+
 }
 
 
