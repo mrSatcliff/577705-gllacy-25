@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <header class="main-header">
+    <header class="main-header container">
       <div class="main-nav-wrapper">
         <a class="main-header-logo">
         <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина Глейси"><!--не является ссылкой на главной, не пункт меню-->
@@ -17,8 +17,8 @@
         <nav class="main-navigation">
           <div class="site-nav-container">
             <ul class="site-navigation">
-              <li>
-                <a class="menu-button" href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
+              <li class="menu-button">
+                <a  href="catalog.html">Каталог</a> <!--это НЕ select, это через CSS-->
 <!--
                 <ul class="catalog">
                   <li class="catalog-new"><a href="#">Новинки</a></li>
@@ -30,13 +30,13 @@
               </li>
 -->
           <!--должно появляться подменю при наведении-->
-              <li><a class="menu-button" href="#">Доставка и оплата</a></li>
-              <li><a class="menu-button" href="#">О компании</a></li>
+              <li class="menu-button"><a href="#">Доставка и оплата</a></li>
+              <li class="menu-button"><a href="#">О компании</a></li>
             </ul>
           </div>
           <ul class="user-navigation">
-            <li>
-              <a class="search-link" href="#">Поиск</a>
+            <li class="search-link">
+              <a href="#">Поиск</a>
 <!--
                 <form class="tooltip search-form" action="https://echo.htmlacademy.ru" method="get">
                   <label for="search" class="visually-hidden">Поиск</label>
@@ -45,8 +45,8 @@
 -->
             </li>
 
-            <li>
-              <a class="login-link" href="#">Вход</a>
+            <li class="login-link">
+              <a href="#">Вход</a>
 <!--
                 <form class="tooltip login-form" action="https://echo.htmlacademy.ru" method="post">
                   <label for="email" class="visually-hidden">Email</label>
@@ -59,49 +59,51 @@
                 </form>
 -->
             </li>
-            <li><a class="empty-cart" href="#">Пусто</a>
+            <li class="empty-cart"><a href="#">Пусто</a>
             </li>
           </ul>
         </nav>
       </div>
         <section class="contacts">
           <div class="worktime">С 10 до 20, ежедневно</div>
-          <a class="telephone" href="tel:88124502525">8 812 450-25-25</a>
+          <div class="telephone">
+          <a href="tel:88124502525">8 812 450-25-25</a>
+        </div>
         </section>
     </header>
 
     <main>
       <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
       <!--Убрать потом-->
-      <div class="coming-soon"></div>
-      <section class="features">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <p class="features-header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-        <ul class="features-list features-col-left">
-          <li class="feature-item feature-item-1">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="feature-item feature-item-2">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-        </ul>
-          <ul class="features-list features-col-right">
-          <li class="feature-item feature-item-3">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="feature-item feature-item-4">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-        </ul>
-      </section>
-      <section class="announces">
-        <div class="blog-container">
-          <h2 class="blog-new">Новое в нашем блоге</h2>
-              <p class="blog-summary">
-                <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-              </p>
-        </div>
-      <div class="subscribe-form">
+      <div class="coming-soon container"></div>
+      <div class="container">
+        <section class="features">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <p class="features-header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+            <ul class="features-list">
+              <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+              <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+              <li class="feature-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+              <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+            </ul>
+        </section>
+        <section class="announces container">
+          <div class="blog-container">
+            <h2 class="blog-new">Новое в нашем блоге</h2>
+                <p class="blog-summary">
+                  <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+                </p>
+          </div>
+          <div class="subscribe-form">
             <form action="https://echo.htmlacademy.ru" method="post">
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
               <label for="subcription" class="visually-hidden">Подписаться на рассылку</label>
               <input type="email" name="email" placeholder="Электронная почта" id="subcription" required>
               <button class="rwbutton" type="submit">Отправить</button>
             </form>
-      </div>
-      </section>
+          </div>
+       </section>
+    </div>
 
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -109,7 +111,7 @@
       </section>
    </main>
 
-   <footer class="main-footer">
+   <footer class="main-footer container">
      <section>
        <h2 class="visually-hidden">Мы в социальных сетях</h2>
        <ul class="footer-social">
@@ -137,11 +139,9 @@
      </section>
      <section class="footer-legal">
        <h2 class="visually-hidden">Юридическая информация</h2>
-       <ul class="footer-legal-left">
+       <ul class="footer-legal">
          <li class="footer-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
          <li><a href="#">О производстве</a></li>
-       </ul>
-       <ul class="footer-legal-right">
          <li><a href="#">Наши документы</a></li>
          <li><a href="#">Экологические стандарты</a></li>
        </ul>
@@ -154,11 +154,11 @@
 
    <!--Модальные окна-->
    <section class="modal modal-feedback">
+     <span class="modal-close">X</span>
      <h2 class="visually-hidden">Форма обратной связи</h2>
      <form action="https://echo.htmlacademy.ru" method="get">
        <label for="your-name" class="visually-hidden"></label>
        <p>Мы обязательно вам ответим!</p>
-       <span class="modal-close">X</span>
        <input type="text" name="your-name" id="your-name" placeholder="Как вас зовут?" required>
        <label for="your-mail" class="visually-hidden"></label>
        <input type="email" name="your-mail" id="your-mail" placeholder="Ваша почта для ответа?" required>
