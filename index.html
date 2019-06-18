@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин мороженого Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -37,18 +37,18 @@
           <ul class="user-navigation">
             <li class="search-link">
               <a href="#">Поиск</a>
-<!--
-                <form class="tooltip search-form" action="https://echo.htmlacademy.ru" method="get">
+               <div class="tooltip search-form">
+                <form action="https://echo.htmlacademy.ru" method="get">
                   <label for="search" class="visually-hidden">Поиск</label>
                   <input type="search" name="search" placeholder="Что ищем?" id="search">
                 </form>
--->
+              </div>
             </li>
 
             <li class="login-link">
               <a href="#">Вход</a>
-<!--
-                <form class="tooltip login-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="tooltip login-form">
+                <form action="https://echo.htmlacademy.ru" method="post">
                   <label for="email" class="visually-hidden">Email</label>
                   <input type="email" name="login" placeholder="Электронная почта" id="email" required>
                   <label for="password" class="visually-hidden">Пароль</label>
@@ -57,7 +57,7 @@
                   <a href="#">Забыли пароль?</a>
                   <a href="#">Новая регистрация</a>
                 </form>
--->
+              </div>
             </li>
             <li class="empty-cart"><a href="#">Пусто</a>
             </li>
@@ -82,8 +82,8 @@
           <p class="features-header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
             <ul class="features-list">
               <li class="feature-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-              <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
               <li class="feature-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+              <li class="feature-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
               <li class="feature-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
             </ul>
         </section>
@@ -141,8 +141,8 @@
        <h2 class="visually-hidden">Юридическая информация</h2>
        <ul class="footer-legal">
          <li class="footer-providers"><a href="#"><!--Сердечко-->Для поставщиков</a></li>
-         <li><a href="#">О производстве</a></li>
          <li><a href="#">Наши документы</a></li>
+         <li><a href="#">О производстве</a></li>
          <li><a href="#">Экологические стандарты</a></li>
        </ul>
     </section>
@@ -154,7 +154,7 @@
 
    <!--Модальные окна-->
    <section class="modal modal-feedback">
-     <span class="modal-close">X</span>
+     <span class="modal-close">&#215;</span>
      <h2 class="visually-hidden">Форма обратной связи</h2>
      <form action="https://echo.htmlacademy.ru" method="get">
        <label for="your-name" class="visually-hidden"></label>

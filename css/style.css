@@ -13,8 +13,8 @@ body {
   color: #FFFFFF;
 
   background-color: #849d8f;
-  /* Временно для сетки */
   /* background-image: url("../img/gllacy-index-full.jpg"); */
+  /* background-image: url('.../img/gllacy-catalog-full.jpg'); */
   background-size: 1200px auto;
   background-repeat: no-repeat;
   min-width: 1200px;
@@ -125,26 +125,6 @@ a {
   /* background-color: #849d8f; */
 }
 
-.catalog-item {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 500;
-  /* background-color: #849d8f; */
-}
-
-.breadcrumbs a,
-.catalog-item a{
-  color: #ffffff;
-}
-
-.catalog-item:hover,
-.catalog-item:focus {
-  color: #ffffff;
-  background-color: #9bafa3;
-  border-radius: 5px;
-}
-
 .catalog a {
   font-size: 14px;
   line-height: 16px;
@@ -200,10 +180,6 @@ a {
   height: 33px;
 }
 
-.search-link a,
-.login-link a {
-  color: inherit;
-}
 
 .login-link,
 .empty-cart {
@@ -254,22 +230,66 @@ a {
 }
 
 .search-form input::placeholder,
- .login-form input::placeholder{
+.login-form input::placeholder{
    font-size: 14px;
    line-height: 24px;
    font-weight: 400;
 }
 
+.search-form {
+  position: absolute;
+  top: 59px;
+  right: 240px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow:  0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.login-form {
+  position: absolute;
+  top: 59px;
+  right: 136px;
+  width: 277px;
+  height: 214px;
+  /* У формы-то можно задать макетную высоту, наверное? Х) */
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 20px;
+  padding-right: 10px;
+}
+
+.login-form form {
+  position: relative;
+}
+
+.login-form input {
+  margin-bottom: 20px;
+  height: 44px;
+  width: 240px;
+}
+
 .login-form a{
+  margin: 0;
+  padding: 0;
   color: #323232;
   font-size: 13px;
   line-height: 24px;
   text-decoration: underline;
+  position: absolute;
+  left: 120px;
+  top: 149px;
 }
 
-.empty-cart a {
-  color: inherit;
+.login-form a:first-of-type {
+  top: 128px;
 }
+
+.login-form button {
+  margin: 0;
+  width: 100px;
+
+}
+
 
 .empty-cart:hover,
 .empty-cart:active,
@@ -286,6 +306,13 @@ a {
   line-height: 16px;
   font-weight: 500;
   border-radius: 15px;
+  width: 117px;
+  height: 33px;
+  align-self: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* А у кнопок можно задавать точные размеры? */
 
 }
 
@@ -296,17 +323,55 @@ a {
   color: #323232;
 }
 
-.cart-block {
+.cart-form {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  width: 540px;
+  height: 245px;
+  border-radius: 5px;
   background-color: #f8f7f4;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
   color: #323232;
   list-style: none;
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-left: 16px;;
 }
 
-.cart-block img {
+.cart-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cart-form ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-form li {
+  display: flex;
+  align-items: center;
+}
+
+.cart-form .rwbutton {
+  align-self: flex-end;
+  width: 170px;
+  height: 45px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cart-form img {
   border-radius: 50%;
+  margin-right: 14px;
 }
 
 .cart-item a {
@@ -316,9 +381,12 @@ a {
 .cart-item-delete {
   background: none;
   border: none;
+  font-size: 25px;
+  font-weight: 100;
 }
 .cart-item-amount {
-
+  margin: 0;
+  margin-left: 31px;
 }
 
 .cart-count-price {
@@ -335,6 +403,7 @@ a {
 
   padding-top: 20px;
   border-top: 1px solid #808080;
+  align-self: flex-end;
 }
 
 .contacts {
@@ -409,6 +478,7 @@ a {
 .menu-button-current {
   background-color: #d07058;
   border-radius: 20px;
+  padding: 8px 13px;
 
   color: #FFFFFF;
   font-size: 16px;
@@ -422,11 +492,26 @@ a {
   border-radius: 20px;
   font-weight: 700;
 }
+li.menu-button-current  a {
+  border: none;
+}
 
 .breadcrumbs {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+  display: flex;
+}
+
+.breadcrumbs li:nth-child(2),
+.breadcrumbs-current {
+  margin-left: 8px;
+}
+
+.breadcrumbs li:nth-child(2)::before,
+.breadcrumbs-current::before {
+  content: "»";
+  margin-right: 8px;
 }
 
 .page-title {
@@ -494,6 +579,107 @@ a {
   box-shadow: inset 0 1px 3px 0 #6a6b6a;
 }
 
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.catalog-item {
+  width: 25%;
+  height: 350px;
+  /* Вроде бы тут обоснованная высота, тк позиционирование схлопывает */
+  text-align: center;
+  align-self: baseline;
+  margin-bottom: 5px;
+  /* outline: 1px solid green; */
+}
+
+.catalog-item {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+
+  background-color: #849d8f;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  color: #ffffff;
+  background-color: #9bafa3;
+  border-radius: 5px;
+  width: 25%;
+  /* height: 405px; */
+  /* Там по макету такая высота, с заползанием на нижний айтем */
+}
+
+.catalog-item h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  font-size: 16px;
+  line-height: 22px;
+
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+}
+
+.catalog-item img {
+  border-radius: 50%;
+  margin-top: 7px;
+  margin-left: 13px;
+  width: 266px;
+  height: 267px;
+  /* Тут, думаю, тоже точные размеры жизненно нужны? */
+}
+
+.catalog-item-price {
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  align-self: flex-start;
+  position: absolute;
+  left: 12px;
+  bottom: 85px;
+}
+
+.catalog-item-kg {
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #ffffff;
+
+  position: absolute;
+  left: 125px;
+  bottom: 85px;
+  margin-left: 5px;
+}
+
+
+.catalog-item-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.catalog-item .rwbutton {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #fefefe;
+  position: absolute;
+  display: none;
+  /* Пока не знаю, как приделать на слой ховера, не буду */
+}
+
   .coming-soon {
     width: 1200px;
     height: 1150px;
@@ -502,15 +688,13 @@ a {
 
 .features {
   list-style: none;
-  background-image: url("../img/wafer-background.jpg");
+  /* background-image: url("../img/wafer-background.jpg"); */
   background-position: 0 0;
   background-size: auto;
   background-repeat: repeat;
-  background-color: #ecdfc3;
+  /* background-color: #ecdfc3; */
   color: #323232;
   border-radius: 15px;
-  min-height: 306px;
-  min-width: 1146px;
   margin-left: 27px;
   margin-right: 27px;
   margin-bottom: 40px;
@@ -520,11 +704,6 @@ a {
   padding-top: 27px;
   padding-bottom: 20px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
   /* outline: 2px dashed teal; */
 }
 
@@ -536,8 +715,9 @@ a {
   font-weight: 500;
   color: #323232;
   /* outline: 1px solid navy; */
-  min-height: 60px;
 }
+
+/* Я в упор не понимаю, почему заголовок недорастянутый относительно подложенного jpeg, параметры шрифта перепроверила 100 раз */
 
 .features-list {
   margin: 0;
@@ -550,11 +730,8 @@ a {
   color: #323232;
   /* outline: 1px solid blue; */
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  /* На встает в две колонки без ограничения высоты. И новые элементы хреново добавляет. Идей нет( */
-  height: 200px;
 }
 
 
@@ -571,18 +748,18 @@ a {
 }
 
 .feature-item:first-child,
-.feature-item:nth-child(2) {
-  padding-left: 55px;
+.feature-item:nth-child(3) {
+  padding-left: 56px;
 }
 
-.feature-item:nth-child(2n) {
+.feature-item:nth-child(2), {
   padding-top: 10px;
 }
 
 .feature-item:first-child,
-.feature-item:nth-child(3) {
-  padding-top: 20px;
-  margin-bottom: 10px;
+.feature-item:nth-child(2) {
+  padding-top: 23px;
+  margin-bottom: 15px;
 }
 
 .announces {
@@ -605,10 +782,9 @@ a {
   padding: 0;
   margin-left: 27px;
   padding-left: 20px;
-  /* padding-right: 50px; */
+  padding-right: 20px;
   padding-top: 25px;
   width: 560px;
-  height: 220px;
   /* outline: 1px solid green; */
 }
 
@@ -640,7 +816,6 @@ a {
   font-weight: 400;
   color: #5a5a5a;
   width: 560px;
-  height: 220px;
 
   background-color: #f8f7f4;
   border: 5px solid white;
@@ -656,10 +831,11 @@ a {
   font-weight: 700;
   font: inherit;
 
-  width: 370px;
+  width: 360px;
   height: 45px;
   margin-top: 20px;
   margin-bottom: 35px;
+  margin-right: 10px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
   padding-top: 5px;
@@ -688,43 +864,16 @@ a {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.catalog-item-price {
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: 700;
-  color: #ffffff;
-}
 
-.catalog-item-kg {
-  font-size: 30px;
-  line-height: 45px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-
-.catalog-item h3 {
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.catalog-item img {
-  border-radius: 50%;
-}
-
-.catalog-item-button {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-  color: #fefefe;
-}
 
 .main-footer {
   padding: 0;
-  margin-top: 10px;
-  background-color: #849d8f;
+  margin-top: 15px;
+  padding-right: 25px;
+  /* background-color: #849d8f; */
   display: flex;
   justify-content: space-between;
+
 }
 
 .main-footer a {
@@ -746,17 +895,17 @@ a {
   flex-direction: row;
   justify-content: space-between;
   width: 185px;
-  height: 40px;
   /* outline: 1px solid red; */
 }
 
-.footer-social li {
+.footer-social a {
   width: 38px;
   height: 38px;
   /* outline: 1px solid yellow; */
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .footer-legal {
@@ -768,33 +917,26 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  min-width: 330px;
-  min-height: 50px;
   /* outline: 1px solid fuchsia; */
-  height: 60px;
-  width: 330px;
 }
 
 .footer-legal ul {
-  padding: 0;
-  margin: 0;
   padding-top: 15px;
-
+  width: 335px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  /* outline: 1px solid red; */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer-legal li {
-  margin-left: 23px;
-
+  width: 50%;
+  /* outline: 1px solid red; */
 }
 
-.footer-legal li:nth-child(2n) {
-  margin-top: 5px;
+.footer-legal li:nth-child(1),
+.footer-legal li:nth-child(3) {
+  padding-left: 20px;
 }
 
 .footer-legal a,
@@ -807,8 +949,10 @@ a {
 .site-navigation a:hover,
 .site-navigation a:active,
 .site-navigation a:focus {
-  border-bottom: none;
+  border-bottom: 1px solid #f7f6f3;
 }
+
+/* Блин, не моуг придумать, как убирать эту при наведении на все <li>, а не на <a>, потому что граница-то у <a>, судя по макету */
 
 .footer-providers {
   font-weight: 700;
@@ -819,12 +963,9 @@ a {
   line-height: 18px;
   font-weight: 400;
 
-  margin-right: 25px;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 60px;
   /* outline: 1px solid lime; */
 }
 
@@ -896,9 +1037,7 @@ a {
 
 .modal-feedback form {
   display: flex;
-  flex-direction: column;
-  width: 478px;
-  height: 443px;
+  flex-direction: column;s
   /* outline: 1px solid red; */
 }
 
@@ -965,20 +1104,13 @@ a {
   position: absolute;
   top: 15px;
   right: 15px;
+  font-size: 25px;
+  font-weight: 100;
 }
 
 .modal-feedback button {
   margin-right: 23px;
   margin-top: 25px;
   align-self: flex-end;
-
-}
-
-
-.inner-page {
-  background-image: url('.../img/gllacy-catalog-full.jpg');
-  background-size: 1200px auto;
-  background-position: top center;
-  background-repeat: no-repeat;
 
 }
